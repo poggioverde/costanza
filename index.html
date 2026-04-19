@@ -512,6 +512,49 @@
     footer a:hover { color: var(--green-light); }
     footer .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
 
+    /* ── SCREENSHOTS ── */
+    .screenshots-section { padding: 100px 24px; overflow: hidden; }
+    .screenshots-scroll {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 20px 0 40px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .screenshots-scroll::-webkit-scrollbar { display: none; }
+    .screenshot-item {
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+      width: 220px;
+    }
+    .screenshot-frame {
+      background: var(--bg-card);
+      border-radius: 32px;
+      border: 2px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      transition: transform .3s;
+    }
+    .screenshot-frame:hover { transform: translateY(-8px) scale(1.02); }
+    .screenshot-frame img {
+      width: 100%;
+      display: block;
+    }
+    .screenshot-label {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .screenshots-hint {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 16px 20px; }
@@ -632,6 +675,54 @@
     <div class="desc">Abitudini illimitate<br/>con Pro</div>
   </div>
 </div>
+
+<!-- SCREENSHOTS -->
+<section class="screenshots-section">
+  <div class="container" style="text-align:center;">
+    <div class="section-label">Screenshots</div>
+    <h2 class="section-title">Vedi Costanza<br/>in azione</h2>
+    <p class="section-sub" style="margin: 0 auto 40px;">Design premium, dark mode nativa, tutto a portata di tap.</p>
+  </div>
+  <div class="screenshots-scroll">
+    <div class="screenshot-item">
+      <div class="screenshot-frame">
+        <img src="assets/screen1.jpg" alt="Home - Le tue abitudini di oggi" loading="lazy" />
+      </div>
+      <div class="screenshot-label">🏠 Home</div>
+    </div>
+    <div class="screenshot-item">
+      <div class="screenshot-frame">
+        <img src="assets/screen2.jpg" alt="Statistiche avanzate" loading="lazy" />
+      </div>
+      <div class="screenshot-label">📊 Statistiche</div>
+    </div>
+    <div class="screenshot-item">
+      <div class="screenshot-frame">
+        <img src="assets/screen3.jpg" alt="Impostazioni" loading="lazy" />
+      </div>
+      <div class="screenshot-label">⚙️ Impostazioni</div>
+    </div>
+    <div class="screenshot-item">
+      <div class="screenshot-frame">
+        <img src="assets/screen4.jpg" alt="Aggiungi abitudine - Icone" loading="lazy" />
+      </div>
+      <div class="screenshot-label">➕ Nuova abitudine</div>
+    </div>
+    <div class="screenshot-item">
+      <div class="screenshot-frame">
+        <img src="assets/screen5.jpg" alt="Aggiungi abitudine - Colori" loading="lazy" />
+      </div>
+      <div class="screenshot-label">🎨 Personalizza</div>
+    </div>
+    <div class="screenshot-item">
+      <div class="screenshot-frame">
+        <img src="assets/screen6.jpg" alt="Schermata aggiuntiva" loading="lazy" />
+      </div>
+      <div class="screenshot-label">✨ Dettagli</div>
+    </div>
+  </div>
+  <p class="screenshots-hint">← scorri →</p>
+</section>
 
 <!-- FEATURES -->
 <section id="features">

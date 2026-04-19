@@ -558,13 +558,44 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 16px 20px; }
-      .privacy-section { grid-template-columns: 1fr; padding: 40px 28px; gap: 40px; }
-      .pricing-grid { grid-template-columns: 1fr; }
-      .privacy-visual { display: none; }
-    }
-    @media (max-width: 500px) {
-      section { padding: 70px 20px; }
+      .nav-cta { padding: 9px 18px; font-size: 0.85rem; }
+
       .hero { padding: 100px 20px 60px; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; max-width: 320px; justify-content: center; }
+
+      .mockup-phone { width: 240px; }
+      .mockup-wrapper { width: 240px; }
+
+      .stats-row { gap: 20px; }
+      .stat-item .num { font-size: 1.8rem; }
+
+      section { padding: 70px 20px; }
+      .screenshots-section { padding: 70px 0; }
+      .screenshot-item { width: 180px; }
+
+      .features-grid { grid-template-columns: 1fr; }
+
+      .privacy-section {
+        grid-template-columns: 1fr;
+        padding: 40px 28px;
+        gap: 32px;
+      }
+      .privacy-visual { display: none; }
+
+      .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+
+      .cta-box { padding: 50px 24px; }
+
+      footer .footer-links { gap: 16px; }
+    }
+
+    @media (max-width: 500px) {
+      .hero h1 { font-size: 2.4rem; }
+      .stats-row { grid-template-columns: 1fr 1fr; display: grid; gap: 24px; padding: 0 20px 60px; }
+      .screenshot-item { width: 160px; }
+      .section-title { font-size: 1.6rem; }
+      .pricing-card.pro::before { display: none; }
     }
   </style>
 </head>
